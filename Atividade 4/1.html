@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    /*
+Faça um programa que recebe um usuário e senha e valida a senha e o usuário com entrada de dados
+Dica(Tente simular um acesso estático e dinâmico usando funções e estruturas de decisão)
+ */
+
+
+    // função para validar usuário e senha
+    function authenticate(user, password) {
+
+        if (users.username == user && users.password == password) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    // um objeto para simular um usuário
+    const users = {
+        username: 'user1',
+        password: 'password1'
+    }
+
+
+    const maxTry = 3;
+    let i = 1;
+
+    // variável para controlar, sinalizar o fluxo do programa
+    let flag = false;
+
+    do {
+
+        alert("Olá. Tentativa de login de número " + i);
+        user = prompt("Informe o usuário: ");
+        password = prompt("Informe a senha: ");
+
+
+        flag = authenticate(user, password);
+
+        validate = flag ?
+            'Usuário autenticado. ' + users.username + ' seja bem-vindo!'
+            :
+            'Usuário ou senha não encontrados. Tente outra vez.';
+
+        i++;
+    } while (i <= maxTry && !flag);
+
+    alert(validate);
+</script>
+
+</html>

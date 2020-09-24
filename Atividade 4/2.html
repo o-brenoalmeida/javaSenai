@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    /*
+Crie um chat para um cliente que quer comprar um carro com entrada de dados.
+Dica(Use estruturas de decisão e ou vetores ou funções...)
+ */
+
+    // array com lista de carros
+    const listCars = [
+        'Gol',
+        'Corsa',
+        'Passat',
+        'Monza',
+        'Chevette',
+    ];
+
+    // função para validar se temos o carro escolhido
+    function checkCar(car) {
+        if (listCars.indexOf(car) > -1) {
+            return true;
+        }
+        return false;
+    }
+
+
+    buy = prompt("Olá. Você deseja comprar um carro conosco? (1 para Sim ou 2 para Não)");
+
+    if (buy == 1) {
+        choice = prompt("Qual carro deseja comprar?");
+
+        if (checkCar(choice)) {
+            alert("Escolheu " + choice + " . Escolheu bem hein?! Em breve entraremos em contato para acertar os detalhes.");
+        } else {
+            alert("Carro não encontrado em nossa loja.");
+        }
+
+    } else {
+        alert("É uma pena! Aguardamos você novamente para uma compra no futuro. Tenha um ótimo dia!")
+    }
+</script>
+
+</html>

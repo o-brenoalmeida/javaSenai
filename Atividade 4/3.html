@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    /*
+Crie um programa que apresenta um cardápio ao cliente de pizzas diversas, com entrada de dados.
+Dica(Use estruturas de decisão e objetos ou vetores...)
+ */
+
+    // array de lista de sabores de pizzas
+    const listPizzas = [
+        'Portuguesa',
+        'Lombo',
+        'Calabresa',
+        'Vegana',
+        'Doce',
+    ];
+
+    // função para validar se temos o sabor de pizza escolhido
+    function checkPizza(pizza) {
+        if (listPizzas.indexOf(pizza) > -1) {
+            return true;
+        }
+        return false;
+    }
+
+    // variável para controlar, sinalizar o fluxo do programa
+    let flag = false;
+
+    do {
+        choice = prompt("Bem-vindo a Pizzaria! Os nossos sabores são: \n\n" + listPizzas.join('\n'));
+        if (checkPizza(choice)) {
+            alert("Escolheu " + choice + " . Escolheu bem hein?!");
+            address = prompt("Qual o endereço para envio?");
+
+            alert("Em breve sua pizza " + choice + " estará chegando em " + address);
+            flag = true;
+
+        } else {
+            answer = prompt("Que pena, estamos sem esse sabor. Deseja tentar outro sabor? \n 1 - Sim \n 2 - Não");
+            flag = answer == 1 ? false : true;
+            console.log(flag);
+        }
+    } while (!flag);
+
+    alert("Até a próxima!");
+</script>
+
+</html>
