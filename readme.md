@@ -15,6 +15,7 @@ Esse projeto foi desenvolvido utilizando as seguintes tecnologias até então e 
 - [HTML](https://www.w3schools.com/html/)
 - [CSS](https://www.w3schools.com/css/default.asp)
 - [Javascript](https://www.w3schools.com/js/default.asp)
+- [Java {Java EE, Servlets}](https://www.w3schools.com/java/default.asp)
 
 ---
 
